@@ -1,0 +1,137 @@
+/* Reset some default styles */
+:root{
+	--main-color: hsla(0, 0%, 7%, 0.4);
+	--main-color-full: hsla(0, 0%, 7%, 1);
+	--secondary-color: hsla(0, 0%, 18%, 0.7);
+	--secondary-color-full: hsla(0, 0%, 18%, 1);
+	--shadow-color: hsla(38, 100%, 73%, 1);
+	--white-lit-color: hsla(38, 100%, 87%, 0.3);
+	--white-color: #f6f6f6;
+}
+
+body, h1, h2, p, ul, li, form {
+    margin: 0;
+    padding: 10px;
+}
+
+/* Set global styles */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    background-color: var(--white-color);
+    color: var(--main-color-full);
+    line-height: 1.5;
+}
+
+.container { 
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--secondary-color-full);
+    padding: 20px;
+    color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    width: 150px;
+	height: 100px;
+	padding: 10px;
+	border-radius: 30%;
+}
+
+header .logo img {
+    width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: var(--white-color);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav ul li a:hover, .active {
+    color: var(--shadow-color);
+    text-decoration: none;
+}
+
+section {
+    padding: 30px;
+}
+
+section h2 {
+    color: var(--main-color-full);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+section .home {
+    margin-bottom: 20px;
+	margin-top: 15px;
+	color: var(--white-color);
+}
+
+section .home .col1 img {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+	margin-bottom: 20px;
+	padding: 5px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+form input, 
+form textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+form button {
+    background-color: var(--secondary-color-full);
+    color: var(--white-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background-color:  var(--secondary-color-full);
+    color:  var(--white-color);
+    text-align: right;
+    padding: 10px;
+}
